@@ -1,0 +1,23 @@
+import "./styles.css";
+
+const HOC = (Component) => {
+  const sampleObj = {
+    name: "Nitesh",
+    role: "UI Developer",
+    company: "Incedo Inc",
+  };
+  return () => <Component value={sampleObj} />;
+};
+
+const App = ({ value }) => {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>{value.name}</h2>
+      <h2>{value.role}</h2>
+      <h2>{value.company}</h2>
+    </div>
+  );
+};
+
+export default HOC(App);
